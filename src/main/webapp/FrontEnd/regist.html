@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100% ;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>            
+        @import url(./css/regist.css);    
+    </style>
+    <title>會員註冊</title>
+    <script>
+        function docheck(){
+          f1= document.all["user_name"].value;
+          f2= document.all["phone_number"].value;      
+          f3= document.all["address"].value;
+          f4= document.all["email"].value;
+          f5= document.all["password"].value;
+          f6= document.all["birthday"].value;
+          if(f1==""){
+            alert("姓名未填寫完整!");
+            return false;
+          }
+          if(f2==""){
+              alert("電話未填寫完整!");
+              return false;
+            }
+          if(f3==""){
+              alert("地址未填寫完整!");
+              
+              return false;
+            }
+            if(f4==""){
+              alert("E-mail未填寫完整!");
+             
+              return false;
+            }
+            if(f5==""){
+              alert("密碼未填寫完整!");
+          
+              return false;
+            }
+            if(f6==""){
+              alert("生日未填寫完整!");
+              
+              return false;
+            }
+          
+          document.myform.submit();
+        }
+      </script>
+</head>
+<body style="height:100% ;">
+    <div class="form_div">
+        <form action="http://localhost:8080/Project/regist" name="myform">
+            <fieldset class="form1">
+                <legend>註冊會員</legend>               
+                <p><label for="user_name">姓名 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="user_name" id="user_name" size="40"></p>
+                <p><label for="phone_number">電話: </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="phone_number" id="phone_number" size="40"></p>
+                <p><label for="address">地址 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="address" id="address" size="40"></p>               
+                <p><label for="email">E-mail:</label>&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="email" size="40"></p>
+                <p><label for="password">密碼 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="password" size="40"></p>
+                <p><label for="birthday">生日 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="birthday" id="birthday" size="40"></p>
+                <div style=" text-align: center;"><p><input type="button" value="提交" onclick="docheck();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重置"></p></div>                   
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+</html>

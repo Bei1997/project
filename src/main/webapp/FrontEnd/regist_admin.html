@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100% ;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>            
+        @import url(./css/regist.css);    
+    </style>
+    <title>管理者註冊</title>
+    <script>
+        function docheck(){
+          f1= document.all["admin_name"].value;
+          f2= document.all["email"].value;
+          f3= document.all["password"].value;
+          f4= document.all["admin_position"].value;
+          if(f1==""){
+            alert("姓名未填寫完整!");
+            return false;
+          }
+          if(f2==""){
+              alert("E-mail未填寫完整!");
+              return false;
+            }
+          if(f3==""){
+              alert("密碼未填寫完整!");
+              
+              return false;
+            }
+            if(f4==""){
+              alert("職位未填寫完整!");
+             
+              return false;
+            }
+           
+          
+          document.myform.submit();
+        }
+      </script>
+</head>
+<body style="height:100% ;">
+    <div class="form_div">
+        <form method="post" action="http://localhost:8080/Project/regist_admin" name="myform">
+            <fieldset class="form1">
+                <legend>註冊管理者</legend>               
+                <p><label for="admin_name">姓名 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="admin_name" id="admin_name" size="40"></p>
+                <p><label for="email">E-mail:</label>&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="email" size="40"></p>
+                <p><label for="password">密碼 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="password" size="40"></p>
+                <p><label for="admin_position">職位 : </label>&nbsp;&nbsp;&nbsp;&nbsp;<select name="admin_position" id="admin_position" size="1">
+                  <option value="Manager">經理</option>
+                  <option value="Supervisor">主任</option>
+                  <option value="Captain">領班</option>
+                  <option value="Waiter">服務員</option>
+                </select>
+                <div style=" text-align: center;"><p><input type="button" value="提交" onclick="docheck();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重置"></p></div>                   
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+</html>

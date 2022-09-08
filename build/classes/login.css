@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+
+.account{
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 5%;
+    padding-bottom: 5%; 
+    width: 50%;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    color: rgb(255, 255, 255);
+    backdrop-filter: brightness(60%);
+   border: solid 3px;
+}
+.register{
+    font-size: 1rem;
+    text-decoration:none;
+    color: rgba(247, 247, 247, 0.5);
+}
+
+.backdrop{
+    background-image:url(photo/2.jpg);
+    background-position: center bottom ;
+    background-size: 100%;
+    background-repeat: none;
+    background-attachment: fixed;   
+}
+
+.login_box{
+    position:relative ;
+    top: 180px;
+}
+legend {
+    
+    padding: 10px 50px;
+    font-size: 5rem;
+    margin: auto; 
+}
+
+
+/*帶考慮*/
+.div1{
+    background-color:rgb(200, 198, 198); 
+    margin: 2% 10%; 
+    margin-bottom: 1%; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}

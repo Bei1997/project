@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <style>     
+        
+        @import url(./css/login.css);    
+    </style>
+    <script>
+        function docheck(){
+          f1= document.all["email"].value;  ;
+          f2= document.all["passwd"].value;       
+                if(f1==""){
+                    alert("帳號(email)未填寫完整!");
+                    return false;
+                }
+                if(f2==""){
+                    alert("密碼未填寫完整!");
+                    return false;
+                    }
+            document.myform.submit();
+        }
+    </script>
+</head>
+<body class="backdrop">
+
+    <div class="login_box">
+        <div style="float: left;width: 25%;">
+        <p><br></p>
+        </div>
+        <form method="post" name="myform" action="http://localhost:8080/Project/login">
+            <fieldset class="account ">
+                <legend>LOGIN</legend>
+                <p ><label for="email">會員帳號&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="email" name="email" id="email" size="30"></p>
+                <p style="margin-top: 5%; margin-bottom: 3%;" ><label for="passwd">會員密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="password" name="passwd" id="passwd" size="30"></p>
+                <p style="margin-bottom: 6%;"><input type="button" value="登入" onclick="docheck();"> <input type="reset" value="重置"></p>
+                <a class="register" href="regist.html">註冊會員</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

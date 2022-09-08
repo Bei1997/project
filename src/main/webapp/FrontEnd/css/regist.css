@@ -1,0 +1,50 @@
+.form_div{
+
+    display: flex;   
+    margin: auto;   
+
+    height: 60%; 
+    width: 100%;
+    backdrop-filter: brightness(60%);     
+}
+.form1{
+    
+    
+    background-color:rgba(95, 131, 160, 0.555) ;   
+   text-align: center;
+   /* margin-top: 20%;*/
+    line-height: 30px;
+    width: 180%;
+    margin:auto ;
+   
+}
+body{
+    display: flex;
+    background-image:url(../photo/1.jpg) ;
+
+    background-position: center 55% ;
+    background-size: 100%;
+    background-repeat: none;
+    background-attachment: fixed;
+    
+}
+.form1 input{
+
+    line-height: 25px;
+    background-color: beige;
+    
+}
+.form1 p{
+    font-size: 20px;
+    color: aliceblue;
+
+    
+}
+legend{
+    font-size: 36px;
+    background-color: rgba(240, 248, 255, 0.781);
+
+}
+form{
+    margin:auto ;
+}

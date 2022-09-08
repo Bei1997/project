@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--參考網址-->
+<!--https://codepen.io/sreisner/pen/KazJmO-->
+<html lang="en" style="background-image: url(./photo/12.jpg);"class="bgimg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>            
+        @import url(./css/order.css);    
+    </style>
+</head>
+<body>
+
+<main class="main">
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul>
+          <li><a href="menu2.html">Welcome</a></li>
+          <li><a href="appetizer.html">前菜</a></li>
+          <li><a href="Maincourse.html">主食</a></li>
+          <li><a href="dessert.html">甜點</a></li>
+          <li><a href="drink.html">飲料</a></li>
+          <li class="active"><a href="order.html">點餐</a></li>
+          <li><a href="http://localhost:8080/Project/order_inquire">訂單查詢</a></li>
+          <li><a href="http://localhost:8080/Project/member">會員資料查詢</a></li>
+          <li><a href="login.html">會員登出</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="menu">
+      <div style="margin:10% ">
+    <form method="post" action="http://localhost:8080/Project/order" name="myform" >
+      <table>
+        <caption>訂單</caption>
+        <thead>
+        <tr>
+          <th colspan="2">前菜 Appetizer</th>         
+          <th colspan="2">主菜 Maincourse</th>          
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><img src="./photo/Pumpkin Soup.jpg"></td>
+          <td><img src="./photo/Tomato soup.jpg"></td>
+          <td><img src="./photo/Sirloin Steak.jpg"></td>
+          <td><img src="./photo/Ribeye Steak.jpg"></td>
+        </tr>
+        <tr>
+          <td>南瓜濃湯 Pumpkin Soup</td>
+          <td>蕃茄濃湯 Tomato Soup</td>
+          <td>沙朗牛排 Sirloin Steak</td>
+          <td>肋眼牛排 Ribeye Steak</td>
+        </tr>
+        <tr>
+          <td><input name="number1" type="number" value="0" min="0"></td>
+          <td><input name="number2" type="number" value="0" min="0"></td>
+          <td><input name="number3" type="number" value="0" min="0"></td>
+          <td><input name="number4" type="number" value="0" min="0"></td>
+        </tr>
+        <tr>
+          <th colspan="2">甜點 Dessert</th>         
+          <th colspan="2">飲品 Drink</th>
+        </tr>
+        <tr>
+          <td><img src="./photo/Mocktail.jpg"></td>
+          <td><img src="./photo/Coffee.jpg"></td>
+          <td><img src="./photo/Waffle.jpg"></td>
+          <td><img src="./photo/Brownie.jpg"></td>
+        </tr>
+        <tr>
+          <td>藍莓加黑莓仿雞尾酒 Mocktail</td>
+          <td>拿鐵咖啡 Coffee Latte</td>
+          <td>格子鬆餅 Waffle</td>
+          <td>布朗尼 Brownie</td>
+        </tr>
+        <tr>
+          <td><input name="number5" type="number" value="0" min="0"></td>
+          <td><input name="number6" type="number" value="0" min="0"></td>
+          <td><input name="number7" type="number" value="0" min="0"></td>
+          <td><input name="number8" type="number" value="0" min="0"></td>
+        </tr>
+        <tr><th colspan="4" style="background-color: rgba(240, 230, 140, 0.753);">送出訂單 <input type="submit"  value="送出"></th></tr>
+        <tbody>        
+      </table>
+    </form>
+    </div>
+    </section>
+    
+  </main>
+</body>
+</html>

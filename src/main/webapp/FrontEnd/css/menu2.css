@@ -1,0 +1,62 @@
+
+html {
+  font-family: Arial;
+  font-size: 18px;
+  background-image: url(../photo/6.jpg);
+  background-size: 100%;
+  background-position-y:10%;
+ 
+}
+/*#2c2450*/
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  background: #202020e5;
+  font-size: 0.65rem;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-60%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  position: relative;
+  margin: 2rem 0;
+}
+.nav ul li a {
+  line-height: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.35);
+  display: block;
+  transition: all ease-out 200ms;
+}
+.nav ul li.active a {
+  color: white;
+}
+.nav ul li:not(.active)::after {
+  opacity: 0.2;
+}
+.nav ul li:not(.active):hover a {
+  color: rgba(255, 255, 255, 0.75);
+}
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.15rem;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+}
